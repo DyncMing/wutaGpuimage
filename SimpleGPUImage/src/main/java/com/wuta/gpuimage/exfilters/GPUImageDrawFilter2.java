@@ -12,12 +12,12 @@ import java.nio.FloatBuffer;
 /**
  * Created by binarymelody on 16/5/12.
  */
-public class GPUImageDrawFilter extends GPUImageFilter {
+public class GPUImageDrawFilter2 extends GPUImageFilter {
 
     protected int mPictureTexture = OpenGlUtils.NO_TEXTURE;
     protected Bitmap mPicture;
 
-    public GPUImageDrawFilter() {
+    public GPUImageDrawFilter2() {
         super();
     }
     public void setTexture(final int Texture)
@@ -45,7 +45,7 @@ public class GPUImageDrawFilter extends GPUImageFilter {
     private int getPictureTexture() { return mPictureTexture; }
 
     public int onDrawPicture(final FloatBuffer triangleBuffer, final FloatBuffer textureBuffer,
-                             int shapes) {
+                              int shapes) {
         if(mFrameBuffer==null)
         {
             mFrameBuffer = new GPUImageFrameBuffer();

@@ -40,21 +40,79 @@ public class OpenGlUtils {
     };
 
     public static final float VERTEX_TRIANGLES[] = {
-            -0.5f, -0.5f,
-            0.5f, -0.5f,
-            0.0f, 0.5f,
+            -1.0f, -1.0f,
+            1.0f, -1.0f,
+            0.0f, 0.0f,
+            1.0f, -1.0f,
+            1.0f, 1.0f,
+            0.0f, 0.0f,
+            1.0f, 1.0f,
             -1.0f, 1.0f,
-            -1.0f, 0.0f,
+            0.0f, 0.0f,
+            -1.0f, 1.0f,
+            -1.0f, -1.0f,
+            0.0f, 0.0f
+    };
+    public static final float CENTER[] = {0.1f,0.5f};
+    public static final float CENTER2[] = {0.5f,0.8f};
+    /*
+    public static final float TEXTURE_TRIANGLES[] = {
             0.0f, 1.0f,
+            0.0f, 0.0f,
+            CENTER[0],CENTER[1],
+            0.0f, 0.0f,
+            1.0f, 0.0f,
+            CENTER[0],CENTER[1],
+            1.0f, 0.0f,
+            1.0f, 1.0f,
+            CENTER[0],CENTER[1],
+            1.0f, 1.0f,
+            0.0f, 1.0f,
+            CENTER[0],CENTER[1],
     };
 
-    public static final float TEXTURE_TRIANGLES[] = {
-            0.3f, 0.3f,
-            0.8f, 0.3f,
-            0.3f, 0.8f,
+    public static final float TEXTURE_TRIANGLES2[] = {
             0.0f, 1.0f,
+            0.0f, 0.0f,
+            CENTER2[0],CENTER2[1],
+            0.0f, 0.0f,
+            1.0f, 0.0f,
+            CENTER2[0],CENTER2[1],
+            1.0f, 0.0f,
+            1.0f, 1.0f,
+            CENTER2[0],CENTER2[1],
+            1.0f, 1.0f,
+            0.0f, 1.0f,
+            CENTER2[0],CENTER2[1],
+    };
+    */
+    public static final float TEXTURE_TRIANGLES[] = {
+            0.0f, 1.0f,
+            1.0f, 1.0f,
+            CENTER[0],CENTER[1],
+            1.0f, 1.0f,
+            1.0f, 0.0f,
+            CENTER[0],CENTER[1],
             1.0f, 0.0f,
             0.0f, 0.0f,
+            CENTER[0],CENTER[1],
+            0.0f, 0.0f,
+            0.0f, 1.0f,
+            CENTER[0],CENTER[1],
+    };
+    public static final float TEXTURE_TRIANGLES2[] = {
+            0.0f, 1.0f,
+            1.0f, 1.0f,
+            CENTER2[0],CENTER2[1],
+            1.0f, 1.0f,
+            1.0f, 0.0f,
+            CENTER2[0],CENTER2[1],
+            1.0f, 0.0f,
+            0.0f, 0.0f,
+            CENTER2[0],CENTER2[1],
+            0.0f, 0.0f,
+            0.0f, 1.0f,
+            CENTER2[0],CENTER2[1],
     };
 
 

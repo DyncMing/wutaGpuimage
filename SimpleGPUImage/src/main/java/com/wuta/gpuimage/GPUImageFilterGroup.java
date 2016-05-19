@@ -185,7 +185,7 @@ public class GPUImageFilterGroup extends GPUImageFilter {
                        final FloatBuffer textureBuffer) {
         runPendingOnDrawTasks();
         if (!isInitialized() || mFrameBuffers == null || mFrameBufferTextures == null) {
-            return;
+            return ;
         }
         if (mMergedFilters != null) {
             int size = mMergedFilters.size();
@@ -212,6 +212,7 @@ public class GPUImageFilterGroup extends GPUImageFilter {
                 }
             }
         }
+        return ;
      }
 
     /**

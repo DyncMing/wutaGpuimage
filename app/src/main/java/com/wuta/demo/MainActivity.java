@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.WindowManager;
 
 import com.wuta.demo.camera.CameraLoaderImpl;
@@ -17,6 +18,7 @@ import com.wuta.gpuimage.GPUImageImpl;
 import com.wuta.gpuimage.IGPUImage;
 import com.wuta.gpuimage.convert.GPUImageConvertor;
 import com.wuta.gpuimage.exfilters.GPUImageDrawFilter;
+import com.wuta.gpuimage.exfilters.GPUImageDrawFilter2;
 import com.wuta.gpuimage.exfilters.GPUImageSampleFilter;
 import com.wuta.gpuimage.exfilters.GPUImageSwirlFilter;
 
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity
 //    private GPUImage mGPUImage;
     private ICameraLoader mCameraLoader;
     private GPUImageFilter mFilter;
-    private GPUImageDrawFilter mDrawFilter;
+    //private GPUImageDrawFilter mDrawFilter;
+   // private GPUImageDrawFilter2 mDrawFilter2;
 
     private IGPUImage mIGPUImage;
     @Override
@@ -43,14 +46,22 @@ public class MainActivity extends AppCompatActivity
 //        mGPUImage.setFilter(mFilter);
         mFilter = new GPUImageSwirlFilter();
 
-        mDrawFilter = new GPUImageDrawFilter();
+        //mDrawFilter = new GPUImageDrawFilter();
+       // mDrawFilter2 = new GPUImageDrawFilter2();
 //        mIGPUImage.setFilter(mFilter);
-        mIGPUImage.setDrawFilter(mDrawFilter);
+       // mIGPUImage.setDrawFilter(mDrawFilter);
+       // mIGPUImage.setDrawFilter2(mDrawFilter2);
 
-        Bitmap picture = BitmapFactory.decodeResource(getResources(), R.mipmap.testpic);
-        mIGPUImage.setDrawPicture(picture);
+        //Bitmap picture = BitmapFactory.decodeResource(getResources(), R.mipmap.lena512);
+        //mIGPUImage.setDrawPicture(picture);
 
         mCameraLoader = CameraLoaderImpl.getInstance();
+        findViewById(R.id.switcher).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCameraLoader.switchCamera(MainActivity.this, mIGPUImage);
+            }
+        });
     }
 
     @Override
